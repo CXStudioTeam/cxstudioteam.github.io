@@ -242,20 +242,24 @@ body {
   position: relative;
   border-radius: 2rem;
   background: var(--panel-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   padding: clamp(2.5rem, 4vw, 3.5rem) 1.5rem;
   overflow: hidden;
 }
 
-.showcase img {
+.showcase .slide {
+  grid-area: 1 / 1;
   display: block;
   width: min(19rem, 88%);
   height: auto;
   border-radius: 1.5rem;
   box-shadow: 0 1.5rem 3rem rgba(60, 40, 100, 0.4);
+  opacity: 0;
+  transition: opacity 0.9s ease;
 }
+
+.showcase .slide.active { opacity: 1; }
 
 /* ---------- Features ---------- */
 
@@ -386,6 +390,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .btn, .play-badge, .nav-cta { transition: none; }
+  .showcase .slide { transition: none; }
 }
 </style>
 </head>
@@ -464,7 +469,11 @@ body {
     </div>
 
     <div class="showcase">
-      <img src="assets/shot-hero.webp" alt="Film Cam — vintage film photo collage with date stamps" width="720" height="1280">
+      <img class="slide active" src="assets/shot-hero.webp" alt="Film Cam — vintage film photo collage with date stamps" width="720" height="1280">
+      <img class="slide" src="assets/shot-2.webp" alt="Film Cam — polaroid-style photo collage" width="720" height="1280" loading="lazy" decoding="async">
+      <img class="slide" src="assets/shot-3.webp" alt="Film Cam — film strip photos of cats" width="720" height="1280" loading="lazy" decoding="async">
+      <img class="slide" src="assets/shot-4.webp" alt="Film Cam — warm café photos on film" width="720" height="1280" loading="lazy" decoding="async">
+      <img class="slide" src="assets/shot-5.webp" alt="Film Cam — black-and-white polaroid portraits" width="720" height="1280" loading="lazy" decoding="async">
     </div>
   </section>
 
@@ -533,5 +542,18 @@ body {
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var slides = document.querySelectorAll('.showcase .slide');
+  if (slides.length < 2) return;
+  var current = 0;
+  setInterval(function () {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 3000);
+})();
+</script>
 </body>
 </html>

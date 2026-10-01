@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280">
+  <rect width="720" height="1280" rx="56" fill="#000000"/>
+  <rect x="14" y="14" width="692" height="1252" rx="44" fill="#1F2937"/>
+  <rect x="290" y="30" width="140" height="28" rx="14" fill="#000000"/>
+  <circle cx="360" cy="500" r="150" fill="none" stroke="#7C3AED" stroke-width="26" stroke-dasharray="707 471" stroke-linecap="round" transform="rotate(-90 360 500)"/>
+  <text x="360" y="490" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#111827" text-anchor="middle">25:00</text>
+  <text x="360" y="545" font-family="Arial, sans-serif" font-size="26" fill="#6B7280" text-anchor="middle">FOCUS</text>
+  <rect x="190" y="720" width="340" height="78" rx="39" fill="#7C3AED"/>
+  <text x="360" y="769" font-family="Arial, sans-serif" font-size="30" font-weight="600" fill="#ffffff" text-anchor="middle">Start</text>
+  <text x="360" y="1000" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#111827" text-anchor="middle">App Lock</text>
+  <text x="360" y="1055" font-family="Arial, sans-serif" font-size="26" fill="#9CA3AF" text-anchor="middle">Screenshot placeholder</text>
+  <text x="360" y="1095" font-family="Arial, sans-serif" font-size="20" fill="#D1D5DB" text-anchor="middle">720 x 1280</text>
+  <rect x="180" y="1140" width="360" height="86" rx="24" fill="#E5E7EB"/>
+  <circle cx="240" cy="1183" r="16" fill="#C4B5FD"/>
+  <circle cx="320" cy="1183" r="16" fill="#E5E7EB"/>
+  <circle cx="400" cy="1183" r="16" fill="#E5E7EB"/>
+  <circle cx="480" cy="1183" r="16" fill="#E5E7EB"/>
+</svg>
